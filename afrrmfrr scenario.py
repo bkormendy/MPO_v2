@@ -14,7 +14,6 @@ targetDemandList = [x for x in targetDemand_with_nan if str(x) != 'nan']
 df = pd.read_csv(r"E:\Tulajdonos\Desktop\Tomasz diplomamunka\Új inputadatok\FULL_merged_ajanlatok-20210101-20210102.csv",
     sep=';', skipinitialspace=True)
 
-
 overallCounter = 0
 
 output_dict = {"Unique ID": [],
