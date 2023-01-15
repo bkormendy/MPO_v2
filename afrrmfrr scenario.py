@@ -1,17 +1,17 @@
 import pandas as pd  # Dataframes
-from pulp import *  # Simplex
+from pulp import *
 import uuid  # Unique ID in output file
 import json  # pretty printing output dict
 import time
 start_time = time.time()
 
 demand_df = pd.read_excel(
-    r"C:\Users\csika\Desktop\2021_full_imbalance_20221201.xlsx")
+    r"E:\Tulajdonos\Desktop\Tomasz diplomamunka\Új inputadatok\2021_full_imbalance_20221201.xlsx")
 
 targetDemand_with_nan = demand_df['SZUMMA'].tolist()
 targetDemandList = [x for x in targetDemand_with_nan if str(x) != 'nan']
 
-df = pd.read_csv(r"C:\Users\csika\Desktop\FULL_merged_ajanlatok-20210101-20210102.csv",
+df = pd.read_csv(r"E:\Tulajdonos\Desktop\Tomasz diplomamunka\Új inputadatok\FULL_merged_ajanlatok-20210101-20210102.csv",
     sep=';', skipinitialspace=True)
 
 overallCounter = 0
